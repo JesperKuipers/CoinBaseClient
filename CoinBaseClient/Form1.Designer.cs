@@ -31,8 +31,6 @@
             this.TradeCoinsPage = new System.Windows.Forms.TabControl();
             this.PricesPage = new System.Windows.Forms.TabPage();
             this.dataGridViewerPrices = new System.Windows.Forms.DataGridView();
-            this.Coin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LLastUpdatePrices = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Wallet = new System.Windows.Forms.TabPage();
@@ -41,9 +39,12 @@
             this.TSelectCoins = new System.Windows.Forms.TextBox();
             this.LTitleChooseCoins = new System.Windows.Forms.Label();
             this.dataGridViewWallet = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LLastUpdateWallet = new System.Windows.Forms.Label();
+            this.PCoin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WCoin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TradeCoinsPage.SuspendLayout();
             this.PricesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewerPrices)).BeginInit();
@@ -82,24 +83,12 @@
             this.dataGridViewerPrices.AllowUserToDeleteRows = false;
             this.dataGridViewerPrices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewerPrices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coin,
-            this.Price});
+            this.PCoin,
+            this.PPrice});
             this.dataGridViewerPrices.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewerPrices.Name = "dataGridViewerPrices";
             this.dataGridViewerPrices.Size = new System.Drawing.Size(240, 399);
             this.dataGridViewerPrices.TabIndex = 4;
-            // 
-            // Coin
-            // 
-            this.Coin.DataPropertyName = "Coin";
-            this.Coin.HeaderText = "Coin";
-            this.Coin.Name = "Coin";
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
             // 
             // LLastUpdatePrices
             // 
@@ -175,24 +164,13 @@
             this.dataGridViewWallet.AllowUserToDeleteRows = false;
             this.dataGridViewWallet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWallet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.WCoin,
+            this.WPrice,
+            this.WAmount});
             this.dataGridViewWallet.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewWallet.Name = "dataGridViewWallet";
             this.dataGridViewWallet.Size = new System.Drawing.Size(240, 399);
             this.dataGridViewWallet.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Coin";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Coin";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // LLastUpdateWallet
             // 
@@ -202,6 +180,44 @@
             this.LLastUpdateWallet.Size = new System.Drawing.Size(66, 13);
             this.LLastUpdateWallet.TabIndex = 5;
             this.LLastUpdateWallet.Text = "Last update:";
+            // 
+            // PCoin
+            // 
+            this.PCoin.DataPropertyName = "Coin";
+            this.PCoin.HeaderText = "Coin";
+            this.PCoin.Name = "PCoin";
+            this.PCoin.ReadOnly = true;
+            // 
+            // PPrice
+            // 
+            this.PPrice.DataPropertyName = "Price";
+            this.PPrice.HeaderText = "Price";
+            this.PPrice.Name = "PPrice";
+            this.PPrice.ReadOnly = true;
+            // 
+            // WCoin
+            // 
+            this.WCoin.DataPropertyName = "Coin";
+            this.WCoin.HeaderText = "Coin";
+            this.WCoin.Name = "WCoin";
+            this.WCoin.ReadOnly = true;
+            this.WCoin.Width = 45;
+            // 
+            // WPrice
+            // 
+            this.WPrice.DataPropertyName = "Price";
+            this.WPrice.HeaderText = "Price";
+            this.WPrice.Name = "WPrice";
+            this.WPrice.ReadOnly = true;
+            this.WPrice.Width = 60;
+            // 
+            // WAmount
+            // 
+            this.WAmount.DataPropertyName = "Amount";
+            this.WAmount.HeaderText = "Amount";
+            this.WAmount.Name = "WAmount";
+            this.WAmount.ReadOnly = true;
+            this.WAmount.Width = 65;
             // 
             // Form1
             // 
@@ -235,12 +251,13 @@
         private System.Windows.Forms.Label LLastUpdatePrices;
         private System.Windows.Forms.Button BSaveSettings;
         private System.Windows.Forms.DataGridView dataGridViewerPrices;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridView dataGridViewWallet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label LLastUpdateWallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PCoin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WCoin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WAmount;
     }
 }
 
