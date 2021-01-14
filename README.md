@@ -1,5 +1,5 @@
 # (WIP) A client for coinbase 
-<img src="https://media.giphy.com/media/6Ben75r8SElL3wYOyv/giphy.gif"/>
+<img src="https://media.giphy.com/media/6Ben75r8SElL3wYOyv/giphy.gif" width=80%/>
 
 # ToDo
 - [ ] at Prices show last update
