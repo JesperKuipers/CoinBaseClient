@@ -1,5 +1,5 @@
 # (WIP) A client for coinbase 
-<a href="https://imgur.com/a/lpKzpC5"></a>
+![](https://imgur.com/a/lpKzpC5.gif)
 
 # ToDo
 - [ ] at Prices show last update
