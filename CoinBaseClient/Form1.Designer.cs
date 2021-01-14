@@ -30,26 +30,26 @@
         {
             this.TradeCoinsPage = new System.Windows.Forms.TabControl();
             this.PricesPage = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewerPrices = new System.Windows.Forms.DataGridView();
             this.Coin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LLastUpdatePrices = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Wallet = new System.Windows.Forms.TabPage();
             this.SettingsPage = new System.Windows.Forms.TabPage();
             this.BSaveSettings = new System.Windows.Forms.Button();
             this.TSelectCoins = new System.Windows.Forms.TextBox();
             this.LTitleChooseCoins = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewWallet = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LLastUpdateWallet = new System.Windows.Forms.Label();
             this.TradeCoinsPage.SuspendLayout();
             this.PricesPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewerPrices)).BeginInit();
             this.Wallet.SuspendLayout();
             this.SettingsPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWallet)).BeginInit();
             this.SuspendLayout();
             // 
             // TradeCoinsPage
@@ -66,8 +66,8 @@
             // 
             // PricesPage
             // 
-            this.PricesPage.Controls.Add(this.dataGridView1);
-            this.PricesPage.Controls.Add(this.label1);
+            this.PricesPage.Controls.Add(this.dataGridViewerPrices);
+            this.PricesPage.Controls.Add(this.LLastUpdatePrices);
             this.PricesPage.Location = new System.Drawing.Point(4, 22);
             this.PricesPage.Name = "PricesPage";
             this.PricesPage.Padding = new System.Windows.Forms.Padding(3);
@@ -76,18 +76,18 @@
             this.PricesPage.Text = "Prices";
             this.PricesPage.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewerPrices
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewerPrices.AllowUserToAddRows = false;
+            this.dataGridViewerPrices.AllowUserToDeleteRows = false;
+            this.dataGridViewerPrices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewerPrices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Coin,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 399);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridViewerPrices.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewerPrices.Name = "dataGridViewerPrices";
+            this.dataGridViewerPrices.Size = new System.Drawing.Size(240, 399);
+            this.dataGridViewerPrices.TabIndex = 4;
             // 
             // Coin
             // 
@@ -101,14 +101,14 @@
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
-            // label1
+            // LLastUpdatePrices
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 408);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.LLastUpdatePrices.AutoSize = true;
+            this.LLastUpdatePrices.Location = new System.Drawing.Point(0, 402);
+            this.LLastUpdatePrices.Name = "LLastUpdatePrices";
+            this.LLastUpdatePrices.Size = new System.Drawing.Size(66, 13);
+            this.LLastUpdatePrices.TabIndex = 3;
+            this.LLastUpdatePrices.Text = "Last update:";
             // 
             // tabPage3
             // 
@@ -121,8 +121,8 @@
             // 
             // Wallet
             // 
-            this.Wallet.Controls.Add(this.dataGridView2);
-            this.Wallet.Controls.Add(this.label2);
+            this.Wallet.Controls.Add(this.dataGridViewWallet);
+            this.Wallet.Controls.Add(this.LLastUpdateWallet);
             this.Wallet.Location = new System.Drawing.Point(4, 22);
             this.Wallet.Name = "Wallet";
             this.Wallet.Size = new System.Drawing.Size(795, 422);
@@ -169,18 +169,18 @@
             this.LTitleChooseCoins.TabIndex = 0;
             this.LTitleChooseCoins.Text = "Fill the coins to follow below (seperate with semicolon):";
             // 
-            // dataGridView2
+            // dataGridViewWallet
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewWallet.AllowUserToAddRows = false;
+            this.dataGridViewWallet.AllowUserToDeleteRows = false;
+            this.dataGridViewWallet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewWallet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 399);
-            this.dataGridView2.TabIndex = 6;
+            this.dataGridViewWallet.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewWallet.Name = "dataGridViewWallet";
+            this.dataGridViewWallet.Size = new System.Drawing.Size(240, 399);
+            this.dataGridViewWallet.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -194,14 +194,14 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Price";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // label2
+            // LLastUpdateWallet
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 405);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.LLastUpdateWallet.AutoSize = true;
+            this.LLastUpdateWallet.Location = new System.Drawing.Point(0, 402);
+            this.LLastUpdateWallet.Name = "LLastUpdateWallet";
+            this.LLastUpdateWallet.Size = new System.Drawing.Size(66, 13);
+            this.LLastUpdateWallet.TabIndex = 5;
+            this.LLastUpdateWallet.Text = "Last update:";
             // 
             // Form1
             // 
@@ -214,12 +214,12 @@
             this.TradeCoinsPage.ResumeLayout(false);
             this.PricesPage.ResumeLayout(false);
             this.PricesPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewerPrices)).EndInit();
             this.Wallet.ResumeLayout(false);
             this.Wallet.PerformLayout();
             this.SettingsPage.ResumeLayout(false);
             this.SettingsPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWallet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,15 +232,15 @@
         private System.Windows.Forms.TextBox TSelectCoins;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage Wallet;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LLastUpdatePrices;
         private System.Windows.Forms.Button BSaveSettings;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewerPrices;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewWallet;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LLastUpdateWallet;
     }
 }
 

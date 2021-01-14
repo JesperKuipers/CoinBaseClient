@@ -36,7 +36,6 @@ namespace CoinBaseClient
             this.timer = new Timer { Interval = 10000 };
             this.timer.Tick += OnTick;
             this.timer.Start();
-            label1.Text = "1";
         }
 
         //getters
@@ -49,9 +48,6 @@ namespace CoinBaseClient
 
             //update the prices
             updatePrices();
-            int updates = Int32.Parse(label1.Text);
-            updates++;
-            label1.Text = updates.ToString();
         }
 
         public void updatePrices()
@@ -62,7 +58,7 @@ namespace CoinBaseClient
                 bool updated = false;
 
                 // go through every row
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                foreach (DataGridViewRow row in dataGridViewerPrices.Rows)
                 {
                     // check if there already is a row with the same id
                     if (row.Cells["Coin"].Value.ToString() == coinsEnabled[i].ToString())
@@ -79,12 +75,16 @@ namespace CoinBaseClient
                 // if not found, so it's a new one
                 if (!updated)
                 {
-                    int index = dataGridView1.Rows.Add();
+                    int index = dataGridViewerPrices.Rows.Add();
 
-                    dataGridView1.Rows[index].Cells["Price"].Value = getFromAPI.Get_spotprice(this.currency, coinsEnabled[i].ToString());
-                    dataGridView1.Rows[index].Cells["Coin"].Value = coinsEnabled[i].ToString();
+                    dataGridViewerPrices.Rows[index].Cells["Price"].Value = getFromAPI.Get_spotprice(this.currency, coinsEnabled[i].ToString());
+                    dataGridViewerPrices.Rows[index].Cells["Coin"].Value = coinsEnabled[i].ToString();
                 }
             }
+            //Update the label time
+            var time = DateTime.Now.ToString("HH:mm:ss");
+            LLastUpdatePrices.Text = $"Last update: {time}";
+            LLastUpdateWallet.Text = $"Last update: {time}";
         }
 
         private void BSaveSettings_Click(object sender, EventArgs e)
