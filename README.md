@@ -15,7 +15,8 @@
 - [ ] nicer UI
 
 # How to run
-1. Create an API Key [here](https://www.coinbase.com/settings/api)
-1. Open solution in visual studio
-2. Add the file [ApiKeyValues.cs](https://pastebin.com/NaNLyt8R) path should be \CoinBaseClient\ApiKeyValues.cs
-3. Run the code and pray for it to work ;)
+1. Create an account for coinbase [here](https://www.coinbase.com/join/kuiper_n7)
+2. Create an API Key [here](https://www.coinbase.com/settings/api)
+3. Open solution in visual studio
+4. Add the file [ApiKeyValues.cs](https://pastebin.com/NaNLyt8R) path should be \CoinBaseClient\ApiKeyValues.cs
+5. Run the code and pray for it to work ;)
