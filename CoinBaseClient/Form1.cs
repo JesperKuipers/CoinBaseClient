@@ -24,7 +24,7 @@ namespace CoinBaseClient
             this.getFromAPI = new GetFromAPI();
             this.currency = "EUR";
             this.coinsEnabled = new ArrayList() { "BTC" };
-            TSelectCoins.Text = "BTC;";
+            TSelectCoins.Text = "BTC";
 
             //Use below for debugging
             //client.EnableFiddlerDebugProxy("http://localhost.:8888");
@@ -93,10 +93,12 @@ namespace CoinBaseClient
             var coinEnabledPiece = TSelectCoins.Text.Split(';');
             for (int i = 0; i < coinEnabledPiece.Length; i++)
             {
-                this.coinsEnabled.Add(coinEnabledPiece[i]);
-                Console.WriteLine(coinEnabledPiece[i]);
+                if (coinEnabledPiece[i] != "")
+                {
+                    // TODO: trim for spaces and check if exist
+                    this.coinsEnabled.Add(coinEnabledPiece[i]);
+                }
             }
-            //dataGridView1.Rows.Clear();
             updatePrices();
         }
     }
