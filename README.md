@@ -1,6 +1,6 @@
 # (WIP) A client for coinbase 
 
-# TodDo
+# ToDo
 - [ ] at Prices show last update
 - [ ] Save settings to a DB
 - [ ] Retrieve settings from a DB
@@ -12,3 +12,9 @@
 - [ ] Convert coins
 - [ ] Send coins
 - [ ] nicer UI
+
+# How to run
+1. Create an API Key [here](https://www.coinbase.com/settings/api)
+1. Open solution in visual studio
+2. Add the file [ApiKeyValues.cs](https://pastebin.com/NaNLyt8R) path should be \CoinBaseClient\ApiKeyValues.cs
+3. Run the code and pray for it to work ;)
